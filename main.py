@@ -1,57 +1,35 @@
-#Checkbox
-import time
+import pickle
+import random
 
-# import requests
-# from selenium import webdriver
-# from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.common.by import By
-#
-# r_options = Options()
-# r_options.add_experimental_option('detach', True)
-# driver = webdriver.Chrome(options=r_options)
-# driver.get("https://itera-qa.azurewebsites.net/home/automation")
-# driver.maximize_window()
+import openpyxl
+#Read data from Excel sheet
 
-#Select single checkbox
-#driver.find_element(By.XPATH, "//input[@id='monday']").click()
+# path="C:\\Users\\DELL\Desktop\\Test.xlsx"
+# wb=openpyxl.load_workbook(path)
+# sheet=wb.active
+# # title=wb.get_sheet_by_name("Sheet1")
+# rows=sheet.max_row
+# cols=sheet.max_column
+# print(("Max row counr:",rows))
+# print("Max column count:",cols)
+# for r in range(1,rows+1):
+#     for c in range(1,cols + 1):
+#         dd=sheet.cell(row=r, column=c)
+#         print(dd.value, end=" ")
+#     print()
 
-#select multiple checkbox
-# checkboxes = driver.find_elements(By.XPATH, "//*[@type='checkbox' and contains (@id,'day')]")
-# print(len(checkboxes))
+# Write date into Excel sheet
 
-#Approach1
-# for i in range(len(checkboxes)):
-#     checkboxes[i].click()
+# path="C:\\Users\\DELL\Desktop\\Test.xlsx"
+# workbook=openpyxl.load_workbook(path)
+# sheet=workbook.active
+# for r in range(1,6):
+#     for c in range(1,4):
+#         sheet.cell(row=r, column=c).value="welcome"
+# workbook.save(path)
+num=[1,2,3]
 
-# Approach1
-# for checkbox in checkboxes:
-#     checkbox.click()
-
-# links = driver.find_elements(By.TAG_NAME,"a")
-# print(len(links))
-# for link in links:
-#     print(link.text, " ", link.id)
-
-#alllinks = driver.find_elements(By.TAG_NAME,"a")
-#count=0
-# for link in alllinks:
-#     url = link.get_attribute('href')
-#     try:
-#         res = requests.head(url)
-#     except:
-#         None
-#     if res.status_code>=400:
-#         print("broken link : ", url)
-#         #count+=1
-#     else:
-#         print("Valid link : ", url)
-# 
-# time.sleep(10)
-# driver.quit()
-
-l=[1,2,3,4,5,2,3,4,7,9,5]
-myset = set(l)
-
-if l==myset:
-    
+num=num+[4,5,6]
+ss=num
+print(ss, "dd", num)
 
